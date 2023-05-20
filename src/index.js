@@ -29,7 +29,7 @@ function onSearch(evt) {
         })
         .catch(error => fetchError(error));
 } 
-    }
+};
 
 function renderMurkup(arr) {
         
@@ -40,7 +40,7 @@ function renderMurkup(arr) {
          createMurkupList(arr);
          return;
    }
-}
+};
 
     function createMurkupList(name) {
     const markup = name.map(
@@ -54,7 +54,7 @@ function renderMurkup(arr) {
     )
         .join("");
         refs.countryList.innerHTML = markup;
-}
+};
 
 function createMurkup(name) {
     const markup = name.map(
@@ -68,12 +68,10 @@ function createMurkup(name) {
             <li> Languages: ${Object.values(languages)}</li>
             </ul>
             </div>`
-        
-    )
+        )
         .join("");
     refs.countryInfo.innerHTML = markup;
-    
-}
+};
 
 function clearMarkup() {
     refs.countryList.innerHTML = '';
