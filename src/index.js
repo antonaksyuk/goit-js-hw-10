@@ -15,8 +15,6 @@ const refs = {
 refs.searchFormInput.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY))
 let handlingQuery = ''; 
 
-
-
 function onSearch(evt) {
     handlingQuery = evt.target.value.trim();
     clearMarkup();
