@@ -25,24 +25,24 @@ function onSearch(evt) {
             if (arr.length > 10) {
                 Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
         }
-            renderMurkup(arr);
+            renderMarkup(arr);
         })
         .catch(error => fetchError(error));
 } 
 };
 
-function renderMurkup(arr) {
+function renderMarkup(arr) {
         
     if (arr.length === 1) {
-         createMurkup(arr);
+         createMarkup(arr);
          return;
     } if (arr.length >= 2 && arr.length < 10) {
-         createMurkupList(arr);
+         createMarkupList(arr);
          return;
    }
 };
 
-    function createMurkupList(name) {
+    function createMarkupList(name) {
     const markup = name.map(
         ({ name, flags }) =>
     `<li>
@@ -56,7 +56,7 @@ function renderMurkup(arr) {
         refs.countryList.innerHTML = markup;
 };
 
-function createMurkup(name) {
+function createMarkup(name) {
     const markup = name.map(
         ({ name, capital, population, flags, languages }) =>
             `<div class="country-flag-div">
